@@ -1,0 +1,90 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "stripes",
+    "module": "stripes-update",
+    "version": "1.6.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.2"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "stripes-update-1.6.1.jar",
+          "url": "stripes-update-1.6.1.jar",
+          "size": 550208,
+          "sha512": "54f1dbab9cdf3d9b82f8809c8cb4936f83bbdbb31337a5fba7b592e96ecf523dd37bd39119fb15cfb5f34072db145a17cae004c03460f98100de050a10b157f0",
+          "sha256": "2b5c31c478171276b3d994e020881e56eb5fb8f20aacd0bfc41f839bfaafa2fb",
+          "sha1": "ec51d910f67cf7bf8f587129e69d50465825f62f",
+          "md5": "1ee6d10e9b2ab0c2bd30509ba3851fd7"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "commons-logging",
+          "module": "commons-logging",
+          "version": {
+            "requires": "1.1.3"
+          }
+        },
+        {
+          "group": "log4j",
+          "module": "log4j",
+          "version": {
+            "requires": "1.2.17"
+          }
+        },
+        {
+          "group": "jakarta.el",
+          "module": "jakarta.el-api",
+          "version": {
+            "requires": "5.0.1"
+          }
+        },
+        {
+          "group": "commons-io",
+          "module": "commons-io",
+          "version": {
+            "requires": "2.11.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "stripes-update-1.6.1.jar",
+          "url": "stripes-update-1.6.1.jar",
+          "size": 550208,
+          "sha512": "54f1dbab9cdf3d9b82f8809c8cb4936f83bbdbb31337a5fba7b592e96ecf523dd37bd39119fb15cfb5f34072db145a17cae004c03460f98100de050a10b157f0",
+          "sha256": "2b5c31c478171276b3d994e020881e56eb5fb8f20aacd0bfc41f839bfaafa2fb",
+          "sha1": "ec51d910f67cf7bf8f587129e69d50465825f62f",
+          "md5": "1ee6d10e9b2ab0c2bd30509ba3851fd7"
+        }
+      ]
+    }
+  ]
+}
