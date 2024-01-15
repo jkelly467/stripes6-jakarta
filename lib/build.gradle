@@ -27,6 +27,12 @@ dependencies {
     implementation 'jakarta.el:jakarta.el-api:5.0.1'
     compileOnly 'javax.mail:mail:1.4.7'
     implementation 'commons-io:commons-io:2.11.0'
+    implementation 'org.apache.commons:commons-fileupload2-jakarta:2.0.0-M1'
+}
+
+task sourceJar(type: Jar) {
+  classifier 'sources'
+  from sourceSets.main.allJava
 }
 
 publishing {
@@ -34,9 +40,10 @@ publishing {
         maven(MavenPublication) {
             groupId = 'stripes'
             artifactId = 'stripes-update'
-            version = '1.6.1'
+            version = '1.6.3'
 
             from components.java
+            artifact tasks.sourceJar
         }
     }
     repositories {

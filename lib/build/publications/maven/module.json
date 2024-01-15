@@ -3,7 +3,7 @@
   "component": {
     "group": "stripes",
     "module": "stripes-update",
-    "version": "1.6.1",
+    "version": "1.6.3",
     "attributes": {
       "org.gradle.status": "release"
     }
@@ -25,13 +25,13 @@
       },
       "files": [
         {
-          "name": "stripes-update-1.6.1.jar",
-          "url": "stripes-update-1.6.1.jar",
-          "size": 550208,
-          "sha512": "54f1dbab9cdf3d9b82f8809c8cb4936f83bbdbb31337a5fba7b592e96ecf523dd37bd39119fb15cfb5f34072db145a17cae004c03460f98100de050a10b157f0",
-          "sha256": "2b5c31c478171276b3d994e020881e56eb5fb8f20aacd0bfc41f839bfaafa2fb",
-          "sha1": "ec51d910f67cf7bf8f587129e69d50465825f62f",
-          "md5": "1ee6d10e9b2ab0c2bd30509ba3851fd7"
+          "name": "stripes-update-1.6.3.jar",
+          "url": "stripes-update-1.6.3.jar",
+          "size": 550659,
+          "sha512": "0be0fd5817b3030d389d2986c5728d86cbaffb9299bee76bec1c05298fa059e6dce1a612c04feca53ede51ab74e09154e4c8143b7df8e87ab3345eb21f0eefef",
+          "sha256": "466ada5f453746a404968e6cf7de38e4a6bdedf96957a3c89b088ddb21bf8dd9",
+          "sha1": "6760938515c2762d7a6d7a7db45e2f73364bfa0a",
+          "md5": "c86f2439c522002c805090ca71525853"
         }
       ]
     },
@@ -72,17 +72,24 @@
           "version": {
             "requires": "2.11.0"
           }
+        },
+        {
+          "group": "org.apache.commons",
+          "module": "commons-fileupload2-jakarta",
+          "version": {
+            "requires": "2.0.0-M1"
+          }
         }
       ],
       "files": [
         {
-          "name": "stripes-update-1.6.1.jar",
-          "url": "stripes-update-1.6.1.jar",
-          "size": 550208,
-          "sha512": "54f1dbab9cdf3d9b82f8809c8cb4936f83bbdbb31337a5fba7b592e96ecf523dd37bd39119fb15cfb5f34072db145a17cae004c03460f98100de050a10b157f0",
-          "sha256": "2b5c31c478171276b3d994e020881e56eb5fb8f20aacd0bfc41f839bfaafa2fb",
-          "sha1": "ec51d910f67cf7bf8f587129e69d50465825f62f",
-          "md5": "1ee6d10e9b2ab0c2bd30509ba3851fd7"
+          "name": "stripes-update-1.6.3.jar",
+          "url": "stripes-update-1.6.3.jar",
+          "size": 550659,
+          "sha512": "0be0fd5817b3030d389d2986c5728d86cbaffb9299bee76bec1c05298fa059e6dce1a612c04feca53ede51ab74e09154e4c8143b7df8e87ab3345eb21f0eefef",
+          "sha256": "466ada5f453746a404968e6cf7de38e4a6bdedf96957a3c89b088ddb21bf8dd9",
+          "sha1": "6760938515c2762d7a6d7a7db45e2f73364bfa0a",
+          "md5": "c86f2439c522002c805090ca71525853"
         }
       ]
     }
