@@ -14,10 +14,11 @@
  */
 package net.sourceforge.stripes.util;
 
-import org.apache.commons.logging.LogFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
- * <p>A <em>wafer thin</em> wrapper around Commons logging that uses var-args to make it
+ * <p>A <em>wafer thin</em> wrapper around SLF4J that uses var-args to make it
  * much more efficient to call the logging methods in commons logging without having to
  * surround every call site with calls to Log.isXXXEnabled().  All the methods on this
  * class take a variable length list of arguments and, only if logging is enabled for
@@ -27,9 +28,9 @@ import org.apache.commons.logging.LogFactory;
  * @author Tim Fennell
  */
 public final class Log {
-    private org.apache.commons.logging.Log realLog;
+    private final Logger realLog;
 
-    public org.apache.commons.logging.Log getRealLog() {
+    public Logger getRealLog() {
         return realLog;
     }
 
@@ -40,7 +41,7 @@ public final class Log {
      * @return a Log instance with which to log
      */
     public static Log getInstance(Class<?> clazz) {
-        return new Log( LogFactory.getLog(clazz) );
+        return new Log(LoggerFactory.getLogger(clazz));
     }
 
     /**
@@ -48,14 +49,13 @@ public final class Log {
      * it is destroyed, but can be called from user code as well if necessary.
      */
     public static void cleanup() {
-        LogFactory.release(Thread.currentThread().getContextClassLoader());
     }
 
     /**
      * Private constructor which creates a new Log instance wrapping the commons Log instance
      * provided.  Only used by the static getInstance() method on this class.
      */
-    private Log(org.apache.commons.logging.Log realLog) {
+    private Log(Logger realLog) {
         this.realLog = realLog;
     }
 
@@ -66,8 +66,8 @@ public final class Log {
      *        to form the log message.
      */
     public final void fatal(Throwable throwable, Object... messageParts) {
-        if (this.realLog.isFatalEnabled()) {
-            this.realLog.fatal(StringUtil.combineParts(messageParts), throwable);
+        if (this.realLog.isErrorEnabled()) {
+            this.realLog.error(StringUtil.combineParts(messageParts), throwable);
         }
     }
 
@@ -139,8 +139,8 @@ public final class Log {
      *        to form the log message.
      */
     public final void fatal(Object... messageParts) {
-        if (this.realLog.isFatalEnabled()) {
-            this.realLog.fatal(StringUtil.combineParts(messageParts));
+        if (this.realLog.isErrorEnabled()) {
+            this.realLog.error(StringUtil.combineParts(messageParts));
         }
     }
 
